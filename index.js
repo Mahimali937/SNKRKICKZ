@@ -2,6 +2,14 @@ let themeButton = document.getElementById("theme-button");
 const toggleDarkMode = () => 
 {
   document.body.classList.toggle("dark-mode");
+  const themeButton = document.getElementById('theme-button');
+  if (document.body.classList.contains('dark-mode')) 
+  {
+    themeButton.textContent = 'Toggle Light Mode';
+  } else 
+  {
+    themeButton.textContent = 'Toggle Dark Mode';
+  }
 }
 themeButton.addEventListener("click", toggleDarkMode);
 // Add your query for the sign now button here
